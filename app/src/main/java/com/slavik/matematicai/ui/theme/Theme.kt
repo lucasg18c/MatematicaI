@@ -9,13 +9,13 @@ import androidx.compose.runtime.Composable
 private val DarkColorPalette = darkColors(
     primary = Violeta1,
     primaryVariant = Violeta1,
-    secondary = Teal200
+    secondary = Violeta2
 )
 
 private val LightColorPalette = lightColors(
     primary = Violeta1,
     primaryVariant = Violeta1,
-    secondary = Teal200
+    secondary = Violeta2
 
     /* Other default colors to override
     background = Color.White,
@@ -29,14 +29,14 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun MatematicaITheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
+//    val colors = if (darkTheme) {
+//        DarkColorPalette
+//    } else {
+//        LightColorPalette
+//    }
 
     MaterialTheme(
-        colors = colors,
+        colors = LightColorPalette,
         typography = Typography,
         shapes = Shapes,
         content = content
