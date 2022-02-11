@@ -108,5 +108,80 @@ class DivisionTest {
         )
     }
 
+    @Test
+    fun div_9546_403() {
+        val ejercicio = EjercicioDivision(9546, 403)
+
+        assertEquals(
+            23,
+            ejercicio.cociente
+        )
+
+        assertEquals(
+            277,
+            ejercicio.resto
+        )
+
+        assertEquals(
+            mutableListOf(
+                "9546",
+                "8060",
+                "1486",
+                "1209",
+                " 277",
+
+            ),
+            ejercicio.procedimiento
+        )
+    }
+
+    @Test
+    fun div_1059_485() {
+        val ejercicio = EjercicioDivision(1059, 485)
+
+        assertEquals(
+            2,
+            ejercicio.cociente
+        )
+
+        assertEquals(
+            89,
+            ejercicio.resto
+        )
+
+        assertEquals(
+            mutableListOf(
+                "1059",
+                " 970",
+                "  89",
+            ),
+            ejercicio.procedimiento
+        )
+    }
+
+    @Test
+    fun div_710_426() {
+        val ejercicio = EjercicioDivision(6580, 65)
+
+        assertEquals(
+            101,
+            ejercicio.cociente
+        )
+
+        assertEquals(
+            15,
+            ejercicio.resto
+        )
+
+        assertEquals(
+            mutableListOf(
+                "1059",
+                " 970",
+                "  89",
+            ),
+            ejercicio.procedimiento
+        )
+    }
+
 
 }

@@ -34,7 +34,7 @@ fun Navegador(
 
         composable(Rutas.RESTAS) {
             RestaScreen(
-            volver = {nav.popBackStack()}
+                volver = { nav.popBackStack() }
             )
         }
 
@@ -45,9 +45,9 @@ fun Navegador(
         }
 
         composable(Rutas.DIVISION) {
-            DivisionScreen {
-                nav.popBackStack()
-            }
+            DivisionScreen(
+                volver = { nav.popBackStack() }
+            )
         }
     }
 }

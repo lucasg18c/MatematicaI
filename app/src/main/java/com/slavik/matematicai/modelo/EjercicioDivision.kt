@@ -29,7 +29,7 @@ class EjercicioDivision{
 
     private fun generarEjercicio() {
         dividendo = (1..9999).random()
-        divisor = (1..9999).random()
+        divisor = (1..999).random()
 
         // Prevenir resultados < 0
         if (divisor > dividendo) {
@@ -40,6 +40,7 @@ class EjercicioDivision{
     }
 
     fun nuevoEjercicio() {
+        procedimiento = mutableListOf()
         generarEjercicio()
         resolverEjercicio()
     }
@@ -82,7 +83,8 @@ class EjercicioDivision{
 
             // Agregar ceros al cociente entero
             repeat(dividendoLength - mCociente.toString().length) {
-                mCociente *= 10
+                if (mCociente * 10 <= mDividendo)
+                    mCociente *= 10
             }
 
             // Registrar cociente entero
@@ -98,7 +100,6 @@ class EjercicioDivision{
         // Agregar espacios en blanco al inicio de cada paso del procedimiento
         val largoPaso = procedimiento[0].length
         var espacios: String
-        var contadorCeros: Int
 
         for (i in procedimiento.indices) {
 
