@@ -17,9 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.slavik.matematicai.ui.theme.Correcto
-import com.slavik.matematicai.ui.theme.Incorrecto
-import com.slavik.matematicai.ui.theme.Primario
+import com.slavik.matematicai.ui.theme.Verde1
+import com.slavik.matematicai.ui.theme.Rojo1
+import com.slavik.matematicai.ui.theme.Violeta1
 
 
 @Composable
@@ -81,7 +81,7 @@ private fun RestaScreenContenido(
 
         Card(
             modifier = Modifier.fillMaxWidth(),
-            backgroundColor = Primario,
+            backgroundColor = Violeta1,
             elevation = 8.dp
         ) {
             Column(
@@ -132,7 +132,7 @@ private fun RestaScreenContenido(
                     Text(
                         text = resultadoPorUsuario,
                         fontSize = 32.sp,
-                        color = if (resultadoCorrecto) Correcto else Incorrecto,
+                        color = if (resultadoCorrecto) Verde1 else Rojo1,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -163,7 +163,7 @@ private fun RestaScreenContenido(
                         Text(
                             text = resultado,
                             fontSize = 40.sp,
-                            color = if (resultadoCorrecto) Correcto else Incorrecto
+                            color = if (resultadoCorrecto) Verde1 else Rojo1
                         )
                     }
 
@@ -179,7 +179,7 @@ private fun RestaScreenContenido(
 
                     Card(
                         shape = RoundedCornerShape(40.dp),
-                        backgroundColor = if (resultadoCorrecto) Correcto else Incorrecto,
+                        backgroundColor = if (resultadoCorrecto) Verde1 else Rojo1,
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 100.dp)
@@ -197,7 +197,7 @@ private fun RestaScreenContenido(
 
                     Button(
                         onClick = { siguienteEjercicio() },
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Primario),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Violeta1),
                         shape = RoundedCornerShape(40.dp)
                     ) {
                         Text(
@@ -260,7 +260,7 @@ private fun RestaScreenContenido(
 
                     Button(
                         onClick = { comprobarResultado() },
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Primario),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Violeta1),
                         shape = RoundedCornerShape(40.dp),
                         enabled = resultadoPorUsuario.isNotBlank()
                     ) {

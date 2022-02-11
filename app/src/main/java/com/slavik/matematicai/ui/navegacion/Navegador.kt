@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.slavik.matematicai.ui.screens.division.DivisionScreen
+import com.slavik.matematicai.ui.screens.division.DivisionScreen2
 import com.slavik.matematicai.ui.screens.inicio.InicioScreen
 import com.slavik.matematicai.ui.screens.mutli.MultiplicacionScreen
 import com.slavik.matematicai.ui.screens.restas.RestaScreen
@@ -45,7 +46,7 @@ fun Navegador(
         }
 
         composable(Rutas.DIVISION) {
-            DivisionScreen(
+            DivisionScreen2(
                 volver = { nav.popBackStack() }
             )
         }

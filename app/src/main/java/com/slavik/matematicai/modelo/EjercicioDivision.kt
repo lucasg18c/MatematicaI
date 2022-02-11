@@ -29,7 +29,7 @@ class EjercicioDivision{
 
     private fun generarEjercicio() {
         dividendo = (1..9999).random()
-        divisor = (1..999).random()
+        divisor = (1..110).random()
 
         // Prevenir resultados < 0
         if (divisor > dividendo) {

@@ -20,9 +20,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.slavik.matematicai.modelo.EjercicioDivision
-import com.slavik.matematicai.ui.theme.Correcto
-import com.slavik.matematicai.ui.theme.Incorrecto
-import com.slavik.matematicai.ui.theme.Primario
+import com.slavik.matematicai.ui.theme.Verde1
+import com.slavik.matematicai.ui.theme.Rojo1
+import com.slavik.matematicai.ui.theme.Violeta1
 import com.slavik.matematicai.util.Pruebas
 
 @Composable
@@ -30,14 +30,14 @@ fun DivisionScreen(
     volver: () -> Unit,
     vm: DivisionVM = viewModel()
 ) {
-    DivisionScreenContenido(
-        ejercicio = vm.ejercicio,
-        cociente = vm.cociente,
-        resto = vm.resto,
-        mostrarResultado = vm.mostrarResultado,
-        volver = { volver() },
-        onEvento = vm::onEvento
-    )
+//    DivisionScreenContenido(
+//        ejercicio = vm.ejercicio,
+//        cociente = vm.cociente,
+//        resto = vm.resto,
+//        mostrarResultado = vm.mostrarResultado,
+//        volver = { volver() },
+//        onEvento = vm::onEvento
+//    )
 }
 
 @Composable
@@ -75,7 +75,7 @@ private fun DivisionScreenContenido(
 
         Card(
             modifier = Modifier.fillMaxWidth(),
-            backgroundColor = Primario,
+            backgroundColor = Violeta1,
             elevation = 8.dp
         ) {
             Column(
@@ -140,7 +140,7 @@ private fun DivisionScreenContenido(
                             Text(
                                 text = cociente,
                                 fontSize = 32.sp,
-                                color = if (cocienteCorrecto) Correcto else Incorrecto,
+                                color = if (cocienteCorrecto) Verde1 else Rojo1,
                                 textAlign = TextAlign.Center
                             )
                         }
@@ -156,7 +156,7 @@ private fun DivisionScreenContenido(
                             Text(
                                 text = resto,
                                 fontSize = 32.sp,
-                                color = if (restoCorrecto) Correcto else Incorrecto,
+                                color = if (restoCorrecto) Verde1 else Rojo1,
                                 textAlign = TextAlign.Center
                             )
                         }
@@ -191,8 +191,8 @@ private fun DivisionScreenContenido(
                                     textAlign = TextAlign.End,
                                     color = when {
                                         i < ejercicio.procedimiento.size - 1 -> Color.Black
-                                        restoCorrecto -> Correcto
-                                        else -> Incorrecto
+                                        restoCorrecto -> Verde1
+                                        else -> Rojo1
                                     }
                                 )
 
@@ -247,7 +247,7 @@ private fun DivisionScreenContenido(
                                 text = ejercicio.cociente.toString(),
                                 fontSize = 26.sp,
                                 textAlign = TextAlign.Start,
-                                color = if (cocienteCorrecto) Correcto else Incorrecto
+                                color = if (cocienteCorrecto) Verde1 else Rojo1
                             )
                         }
                     }
@@ -256,7 +256,7 @@ private fun DivisionScreenContenido(
 
                     Card(
                         shape = RoundedCornerShape(40.dp),
-                        backgroundColor = if (resultadoCorrecto) Correcto else Incorrecto,
+                        backgroundColor = if (resultadoCorrecto) Verde1 else Rojo1,
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 100.dp)
@@ -274,7 +274,7 @@ private fun DivisionScreenContenido(
 
                     Button(
                         onClick = { onEvento(EventoDivision.SiguienteEjercicio) },
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Primario),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Violeta1),
                         shape = RoundedCornerShape(40.dp)
                     ) {
                         Text(
@@ -370,7 +370,7 @@ private fun DivisionScreenContenido(
 
                     Button(
                         onClick = { onEvento(EventoDivision.ComprobarResultado) },
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Primario),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Violeta1),
                         shape = RoundedCornerShape(40.dp),
                         enabled = cociente.isNotBlank() && resto.isNotBlank()
                     ) {
