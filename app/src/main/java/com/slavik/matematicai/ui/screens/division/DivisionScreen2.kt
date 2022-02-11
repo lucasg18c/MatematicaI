@@ -316,7 +316,8 @@ private fun Contenido(
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 18.dp),
+                        .padding(horizontal = 18.dp)
+                        .padding(bottom = 18.dp),
                     elevation = 8.dp,
                     shape = RoundedCornerShape(10.dp),
                 ) {
@@ -432,14 +433,12 @@ private fun Contenido(
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
         if (estado.mostrarResultado){
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 18.dp),
-                horizontalArrangement = Arrangement.SpaceAround,
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TextButton(

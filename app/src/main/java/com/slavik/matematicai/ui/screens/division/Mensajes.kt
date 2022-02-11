@@ -7,7 +7,7 @@ object Mensajes {
         val Correcto = listOf(
             "Muy bien!",
             "Excelente!",
-            "Impresionante!!",
+            "Wow!!",
         )
 
         val Parcial = listOf(
@@ -19,15 +19,15 @@ object Mensajes {
         val Mal = listOf(
             "Qué pasó?",
             "Ups...",
-            "Falta práctica...",
+            "Falta práctica",
         )
     }
 
     object Procedimiento {
         val Correcto = listOf(
-            "Respondiste correctamente el cociente y resto, seguí así!",
+            "Respondiste bien el cociente y resto, seguí así!",
             "Parece que no necesitás ver como resolverlo, lo hiciste bien sin ayuda.",
-            "Lo hiciste a la perfección!",
+            "Lo hiciste perfecto, felicidades!",
         )
 
 
@@ -52,7 +52,7 @@ object Mensajes {
         val Mal = listOf(
             "Concentrate, te va a salir.",
             "No te rindas.",
-            "Un poco más de práctica y lo vas a tener.",
+            "Un poco más de práctica y te va a salir.",
         )
     }
 }
